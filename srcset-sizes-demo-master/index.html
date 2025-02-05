@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Responsive Image Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        @media (min-width: 600px) {
+            img {
+                width: 66%;
+            }
+        }
+
+        @media (min-width: 960px) {
+            img {
+                width: 50%;
+            }
+        }
+        div:hover{
+            filter:grayscale(100%);
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <img src="tiger01.jpg" alt="Responsive Image"
+        srcset="
+            tiger02.jpg 300w,
+            tiger01.jpg 600w
+        "
+        sizes="(max-width: 600px) 100vw, 
+               (max-width: 960px) 66vw, 
+               50vw">
+    
+    </div>
+    <p>Image width is displayed in the bottom left corner of each image.</p>
+</body>
+</html>

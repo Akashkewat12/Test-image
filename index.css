@@ -1,0 +1,18 @@
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+@media (min-resolution: 2dppx) { /* High-resolution screens */
+    img {
+        content: url("tiger01-1200w.jpg");
+    }
+}
+
+@media (min-resolution: 3dppx) { /* Ultra high-resolution screens */
+    img {
+        content: url("tiger01-1900w.jpg");
+    }
+}
